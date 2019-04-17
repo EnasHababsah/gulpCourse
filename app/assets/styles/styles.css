@@ -1,0 +1,47 @@
+@import "normalize.css";
+@import "base/_var.css";
+@import "base/_global";
+@import "modules/_large-hero";
+@import "modules/_btn";
+
+
+
+.items {
+    display: flex;
+    transition: transform 1s;
+    box-shadow: 20px 2px 0 #000;
+}
+
+::placeholder {
+    color: $mainOrange;
+}
+
+.sections {
+    display: flex;
+}
+
+@media (min-resolution: 2dppx) {
+    .image {
+        background-image: url(image@2x.png);
+    }
+}
+
+
+
+.phone {
+    &_title {
+        width: 500px;
+
+        @media (max-width: 500px) {
+            width: auto;
+        }
+
+        body.is_dark & {
+            color: white;
+        }
+    }
+
+    img {
+        display: block;
+    }
+}
